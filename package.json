@@ -1,0 +1,28 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot that schedule students to class takes questions for Universidade Federal do Ceará, classes of the SMD course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "ufc",
+    "smd",
+    "progII",
+    "javascript"
+  ],
+  "author": "Dante de Araújo",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.1",
+    "@google-cloud/local-auth": "^2.1.0",
+    "datejs": "^1.0.0-rc3",
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "googleapis": "^105.0.0"
+  }
+}
