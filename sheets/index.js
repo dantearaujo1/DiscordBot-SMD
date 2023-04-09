@@ -1,6 +1,7 @@
 const fs             = require('fs');
 const path           = require('node:path');
 const process        = require('process');
+const config = require('../config.json');
 
 const {authenticate} = require('@google-cloud/local-auth');
 const {google}       = require('googleapis');
@@ -71,7 +72,7 @@ async function authorize() {
 async function getData(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   const res = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SPREADSHEET_ID,
+    spreadsheetId: config.spreadsheet_id,
     range: 'Agendamentos!A3:E',
   });
   const rows = res.data.values;
